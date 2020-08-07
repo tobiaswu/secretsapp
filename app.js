@@ -25,7 +25,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-tobias:gRe9qXFu2J0KEVWB@cluster0.uwhbm.mongodb.net/userDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-tobias:gRe9qXFu2J0KEVWB@cluster0.uwhbm.mongodb.net/userDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
